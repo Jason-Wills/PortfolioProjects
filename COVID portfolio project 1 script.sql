@@ -1,3 +1,5 @@
+/* Covid Data Exploration */
+
 SELECT *
 FROM PortfolioProjects..CovidDeaths
 ORDER BY 3,4
