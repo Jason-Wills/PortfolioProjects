@@ -4,9 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>Embedded Analytics with Tableau</title>
+  
 </head>
 <body>
-   <iframe width="1335px" height="894px" src="https://public.tableau.com/app/profile/jason.mugumya/viz/CovidDashboardasof080921/Dashboard1">
-    </iframe>
+  <div id="vizContainer"></div>
+  <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script>
+    var viz
+    function initViz() {
+      var containerDiv = document.getElementById("vizContainer"),
+      url = "https://us-east-1.online.tableau.com/t/zuar/views/Regional/GlobalTemperatures";
+
+      viz = new tableau.Viz(containerDiv, url);
+    }
+    initViz();
+  </script>
+  
 </body>
 </html>
